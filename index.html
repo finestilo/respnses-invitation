@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Note – Lederer</title>
+
+<style>
+body {
+  margin: 0;
+  background: #ffffff;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* ===== WRAPPER ===== */
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== TOP STRIP ===== */
+
+.top {
+  background: #0C1E2B;
+  text-align: center;
+  padding: 28px 0;
+}
+
+.top img {
+  width: 180px;
+}
+
+/* ===== GRADIENT SECTION ===== */
+
+.gradient {
+  position: relative;
+  background: linear-gradient(120deg,#1E2D38 0%,#344B5A 40%,#6F8595 100%);
+  color: #F2F2F2;
+  padding: 120px 20px 140px;
+  overflow: hidden;
+}
+
+/* subtle lines */
+
+.gradient::before {
+  content:"";
+  position:absolute;
+  top:-10%;
+  right:-5%;
+  width:30vw;
+  height:140%;
+  border-left:1px solid rgba(203,191,177,0.3);
+  border-radius:50%;
+  transform: rotate(10deg);
+}
+
+.gradient::after {
+  content:"";
+  position:absolute;
+  bottom:-20%;
+  left:-15%;
+  width:110%;
+  height:28vw;
+  border-top:1px solid rgba(203,191,177,0.25);
+  border-radius:50%;
+  transform: rotate(-6deg);
+}
+
+/* ===== CONTENT ===== */
+
+.content {
+  max-width: 520px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== PERSONAL MESSAGE ===== */
+
+.name {
+  font-size: 15px;
+  color: #CBBFB1;
+  margin-bottom: 40px;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.signature {
+  margin-top: 40px;
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #CBBFB1;
+}
+
+/* ===== RESPONSE AREA ===== */
+
+.response {
+  margin-top: 90px;
+}
+
+.response-label {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #CBBFB1;
+  margin-bottom: 20px;
+}
+
+/* textarea styled like nothing */
+
+textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 0;
+  resize: none;
+  outline: none;
+}
+
+/* button minimal */
+
+button {
+  margin-top: 25px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: #ffffff;
+  padding: 8px 18px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(255,255,255,0.1);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<!-- Top -->
+<div class="top">
+<img src="https://lederertimepieces.com/wp-content/uploads/2025/07/Logo_2025_W_bl.svg">
+</div>
+
+<!-- Gradient -->
+<div class="gradient">
+
+<div class="content">
+
+<div class="name">
+For Mr. Foswa Xavier Overstake
+</div>
+
+<p>
+I wished to share this piece with you at an early stage.
+</p>
+
+<p>
+Your curiosity and encouragement around my work have not gone unnoticed, and it felt natural to place this before you.
+</p>
+
+<p>
+Your impression of it, once encountered, will be of interest to me.
+</p>
+
+<div class="signature">
+Bernhard Lederer
+</div>
+
+<!-- RESPONSE -->
+
+<div class="response">
+
+<div class="response-label">Respond</div>
+
+<textarea rows="3" placeholder=""></textarea>
+
+<button>Send</button>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
