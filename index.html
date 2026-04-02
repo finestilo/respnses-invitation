@@ -12,14 +12,10 @@ body {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* ===== WRAPPER ===== */
-
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
 }
-
-/* ===== TOP STRIP ===== */
 
 .top {
   background: #0C1E2B;
@@ -31,8 +27,6 @@ body {
   width: 180px;
 }
 
-/* ===== GRADIENT SECTION ===== */
-
 .gradient {
   position: relative;
   background: linear-gradient(120deg,#1E2D38 0%,#344B5A 40%,#6F8595 100%);
@@ -40,8 +34,6 @@ body {
   padding: 120px 20px 140px;
   overflow: hidden;
 }
-
-/* subtle lines */
 
 .gradient::before {
   content:"";
@@ -67,16 +59,12 @@ body {
   transform: rotate(-6deg);
 }
 
-/* ===== CONTENT ===== */
-
 .content {
   max-width: 520px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
 }
-
-/* ===== PERSONAL MESSAGE ===== */
 
 .name {
   font-size: 15px;
@@ -96,8 +84,6 @@ p {
   color: #CBBFB1;
 }
 
-/* ===== RESPONSE AREA ===== */
-
 .response {
   margin-top: 90px;
 }
@@ -108,8 +94,6 @@ p {
   color: #CBBFB1;
   margin-bottom: 20px;
 }
-
-/* textarea styled like nothing */
 
 textarea {
   width: 100%;
@@ -123,8 +107,7 @@ textarea {
   outline: none;
 }
 
-/* button minimal */
-
+/* button */
 button {
   margin-top: 25px;
   background: transparent;
@@ -146,12 +129,10 @@ button:hover {
 
 <div class="wrapper">
 
-<!-- Top -->
 <div class="top">
 <img src="https://lederertimepieces.com/wp-content/uploads/2025/07/Logo_2025_W_bl.svg">
 </div>
 
-<!-- Gradient -->
 <div class="gradient">
 
 <div class="content">
@@ -171,6 +152,7 @@ Your interest in independent watchmaking, and in my work in particular, has been
 <p>
 Should this piece resonate with you, there will be an opportunity to reserve one at this stage.
 </p>
+
 <p>
 Your impression, once encountered, would be of great interest to me.
 </p>
@@ -179,22 +161,27 @@ Your impression, once encountered, would be of great interest to me.
 Bernhard Lederer
 </div>
 
-<!-- RESPONSE -->
-
 <div class="response">
 
 <div class="response-label">Respond</div>
 
-<textarea rows="3" placeholder=""></textarea>
+<textarea id="message" rows="3"></textarea>
 
-<button>Send</button>
+<button onclick="sendMail()">Send</button>
 
-</div>
-
-</div>
 </div>
 
 </div>
+</div>
+
+</div>
+
+<script>
+function sendMail() {
+  var body = document.getElementById("message").value;
+  window.location.href = "mailto:dt@lederertimepieces.com?subject=Collector Response&body=" + encodeURIComponent(body);
+}
+</script>
 
 </body>
 </html>
